@@ -98,6 +98,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                Esto es un test
                 <?php 
                 while (have_posts()) : the_post();
                 ?>
