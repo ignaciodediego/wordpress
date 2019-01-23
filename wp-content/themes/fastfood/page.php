@@ -17,6 +17,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css">
+    
     <?php wp_head(); ?>
 
   </head>
@@ -32,6 +33,7 @@
           <div class="col-md-6">
 
             <ul class="social-header list-inline text-xs-right">
+
               <li class="list-inline-item">
                 <a href="#">
                     <span class="fa-stack fa-lg">
@@ -71,25 +73,15 @@
       </div>
 
       <div class="menu-bar text-xs-right">
-        <nav class="container" role="menu">
-          <ul class="menu-list list-inline">
-              <li class="list-inline-item">
-                  <a href="#">Inicio</a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">El restaurante</a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">La carta</a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">Dónde estamos</a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">Contacto y reservas</a>
-                </li>
-            </ul>
-        </nav>
+      <!-- Barra de navegación dinámica creada con WP -->
+        <?php if ( has_nav_menu( 'top' ) ) :
+          wp_nav_menu( array( 
+            'theme_location' => 'top',
+            'container' => 'nav',
+            'container_class' => 'container',
+            'menu_class' => 'menu-list list-inline'
+          ) );
+        endif; ?> <!-- Fin Barra de navegación dinámica -->        
       </div>
 
     </header>
@@ -98,7 +90,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                Esto es un test
                 <?php 
                 while (have_posts()) : the_post();
                 ?>
@@ -123,7 +114,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <strong>fastfood</strong> &copy;2016 - Todos los derechos reservados. Sitio diseñado por <a href="#">Rafel Sansó</a>
+            <strong>fastfood</strong>
           </div>
 
           <div class="col-sm-6 text-xs-right">

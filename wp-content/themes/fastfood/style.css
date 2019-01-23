@@ -38,6 +38,7 @@ header {
 			color: #2a1000;
 		}
 
+/* Menus */
 .menu-bar {
 	background-color: #ffbc01;
 	margin-top: 20px;
@@ -60,6 +61,46 @@ header {
 	.menu-list > li:not(:last-child) {
 		margin-right: 40px;
 	}
+
+/* Submenus */
+.menu-item-has-children {
+	position: relative;
+}
+	.menu-item-has-children .sub-menu {
+		display: none;
+		position: absolute;
+		z-index: 10;
+		padding: 0;
+		min-width: 120px;
+		text-align: left;
+		background-color: #ffbc01;
+		box-shadow: 0 3px 3px rgba(0,0,0,.5);
+	    left: -8px;
+	}
+
+		.menu-item-has-children .sub-menu li {
+			padding: 5px 10px;
+		}
+
+	.menu-item-has-children:hover .sub-menu {
+		display: block;
+	}
+
+	.menu-item-has-children > a::after {
+		    content: '';
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-width: 5px 5px 0 5px;
+		    border-color: #000000 transparent transparent transparent;
+		    position: relative;
+		    top: 13px;
+		    margin-left: 9px;
+	}
+
+		.menu-item-has-children > a:hover::after {
+			border-color: #fff transparent transparent transparent;
+		}
 
 /* Content */
 
@@ -166,10 +207,34 @@ footer {
 		color: #000;
 	}
 
-	
+/* PAGES */	
+h1.entry-title {
+    margin: 30px 0;
+}
+
+.entry-content {
+	margin-bottom: 80px;
+}
+
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
+	margin: 40px 0 20px;
+}
 
 
 /* Helpers */
 .mar-top-80 {
 	margin-top: 80px;
+}
+
+/* WordPress classes */
+.alignright {
+	float: right;
+	margin: 20px 0 20px 20px;
+}
+
+.alignleft {
+	float: right;
+	margin: 20px 20px 20px 0;
 }

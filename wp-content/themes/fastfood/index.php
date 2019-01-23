@@ -239,7 +239,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <strong>fastfood</strong> &copy;2016 - Todos los derechos reservados. Sitio diseñado por <a href="#">Rafel Sansó</a>
+            <strong>fastfood</strong>
           </div>
 
           <div class="col-sm-6 text-xs-right">
